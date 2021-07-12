@@ -20,6 +20,6 @@ This project was created to mock the external dependencies, and stress/load test
     ```
   - Run autocannon module to fire requests to load/stress test by the definitions described at `scripts/autocannon.js`
     ```shell
-      yarn send-messages
+      yarn autocannon
     ```
 
