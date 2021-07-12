@@ -1,16 +1,17 @@
 # Aux Project for Orders-service
 
-This project was created to mock the external dependencies, and stress/load test the orders-service.
+This project was created to help the development of `orders-service` with external dependencies mock and stress/load tests
 
 ## Setup
-  - Create a new .env file from the example given in .env.copy
+  - Install dependencies `yarn install`
+  - Create a new .env file from the example given in `.env.copy`
   - Run docker-compose with the localstack sqs instance.
   - Run script to create queues `yarn create-queues`.
   - copy the queues url generated in terminal.
-  - Set the env variables of both projects.
+  - Set the SQS env variables of both projects.
 
 ## Scripts
-  - Starts the application server with accounts and origin service mocked endpoints, listening on port 4001 as default
+  - Starts the application server with accounts and origin service mocked endpoints, listening on port 4001 by default
     ```shell
       yarn start
     ```
