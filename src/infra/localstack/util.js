@@ -7,9 +7,10 @@ AWS.config.update({region: 'us-east-1'});
 const uuid = require('uuid')
 
 process.env.AWS_ACCESS_KEY_ID
+const awsEndpoint = process.env.LOCALSTACK_URL || 'http://localhost:4566'
 
 const config = {
-    endpoint: new AWS.Endpoint('http://localhost:4566'),
+    endpoint: new AWS.Endpoint(awsEndpoint),
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
     region: 'us-east-1'

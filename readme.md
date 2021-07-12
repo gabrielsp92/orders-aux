@@ -3,10 +3,10 @@
 This project was created to help the development of `orders-service` with external dependencies mock and stress/load tests
 
 ## Setup
-  - Install dependencies `yarn install`
-  - Create a new .env file from the example given in `.env.copy`
+  - Install dependencies with `yarn install` command.
+  - Create a new .env file from the example given in `.env.copy` file
   - Run docker-compose with the localstack sqs instance.
-  - Run script to create queues `yarn create-queues`.
+  - Run script to create queues (`yarn create-queues`).
   - copy the queues url generated in terminal.
   - Set the SQS env variables of both projects.
 
@@ -23,4 +23,7 @@ This project was created to help the development of `orders-service` with extern
     ```shell
       yarn autocannon
     ```
-
+  - Create order and pos queues inside the localstack
+    ```shell
+      yarn create-queues
+    ```
