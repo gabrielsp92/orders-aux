@@ -1,6 +1,3 @@
-const getListOfMerchants = require("./getListOfMerchants");
+const data = require('../data/merchant/merchant')
 
-module.exports = () => {
-  const merchants = getListOfMerchants();
-  return merchants[0];
-};
+module.exports = data;

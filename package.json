@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "send-message": "node scripts/sendMessages.js",
+    "send-messages": "node scripts/sendMessages.js",
     "create-queues": "node scripts/createQueues.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "autocannon": "node scripts/autocannon.js"
   },
   "author": "",
   "license": "ISC",
