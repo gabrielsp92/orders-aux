@@ -6,6 +6,11 @@
   "scripts": {
     "start": "node index.js",
     "send-messages": "node scripts/sendMessages.js",
+    "send-messages:concluded": "cross-env EVENT_FLOW=concluded node scripts/sendMessages.js",
+    "send-messages:canceled": "cross-env EVENT_FLOW=canceled node scripts/sendMessages.js",
+    "send-messages:active": "cross-env EVENT_FLOW=active node scripts/sendMessages.js",
+    "send-messages:single": "cross-env EVENT_FLOW=single node scripts/sendMessages.js",
+    "send-messages:pos": "node scripts/posQueue/sendMessages.js",
     "create-queues": "node scripts/createQueues.js",
     "autocannon": "node scripts/autocannon.js"
   },
@@ -15,6 +20,7 @@
     "autocannon": "^7.4.0",
     "aws-sdk": "^2.943.0",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "morgan": "^1.10.0",

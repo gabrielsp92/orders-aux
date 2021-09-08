@@ -8,8 +8,8 @@ async function run(url, method, body = {}) {
     const inst = autocannon({
         url,
         connections: 10,
-        duration: 500000,
-        connectionRate: 1,
+        duration: 120,
+        // connectionRate: 1,
         method: method,
         headers: {
             "Content-Type": "application/json",
@@ -28,15 +28,17 @@ async function run(url, method, body = {}) {
 
 Promise.all([
     run('http://localhost:4000/api/orders/active?merchantId=1', 'GET'),
-    run('http://localhost:4000/api/orders/1/status/in-preparation', 'POST', { orderId: 1 }),
     run('http://localhost:4000/api/orders/active?merchantId=2', 'GET'),
-    run('http://localhost:4000/api/orders/21/status/in-preparation', 'POST', { orderId: 2 }),
     run('http://localhost:4000/api/orders/active?merchantId=3', 'GET'),
-    run('http://localhost:4000/api/orders/23/status/in-preparation', 'POST', { orderId: 3 }),
-    run('http://localhost:4000/api/orders/active?merchantId=4', 'GET'),
-    run('http://localhost:4000/api/orders/33/status/in-preparation', 'POST', { orderId: 3 }),
-    run('http://localhost:4000/api/orders/active?merchantId=5', 'GET'),
-    run('http://localhost:4000/api/orders/38/status/in-preparation', 'POST', { orderId: 5 }),
+    // run('http://localhost:4000/api/orders/1/status/in-preparation', 'POST', { orderId: 1 }),
+    // run('http://localhost:4000/api/orders/active?merchantId=2', 'GET'),
+    // run('http://localhost:4000/api/orders/21/status/in-preparation', 'POST', { orderId: 2 }),
+    // run('http://localhost:4000/api/orders/active?merchantId=3', 'GET'),
+    // run('http://localhost:4000/api/orders/23/status/in-preparation', 'POST', { orderId: 3 }),
+    // run('http://localhost:4000/api/orders/active?merchantId=4', 'GET'),
+    // run('http://localhost:4000/api/orders/33/status/in-preparation', 'POST', { orderId: 3 }),
+    // run('http://localhost:4000/api/orders/active?merchantId=5', 'GET'),
+    // run('http://localhost:4000/api/orders/38/status/in-preparation', 'POST', { orderId: 5 }),
 ])
 
 
