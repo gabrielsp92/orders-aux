@@ -3,7 +3,8 @@ module.exports = (merchantId) => ({
   autoAccept: true,
   autoStatusChange: true,
   posChannel: "GCOM",
-  statusPos: "IN_PREPARATION",
+  statusPos: "PLACED",
   pdvStatusUpdate: true,
   integrationToken: "token",
+  originPos: ["UBER_EATS"],
 });
